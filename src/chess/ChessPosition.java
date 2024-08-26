@@ -28,10 +28,11 @@ public class ChessPosition {
 	}
 
 	protected static ChessPosition fromPosition(Position position) {
-		return new ChessPosition((char) ('a' - position.getColumn()), 8 - position.getRow());
+		return new ChessPosition((char) ('a' + position.getColumn()), 8 - position.getRow());
 	}
-	
-	//Colocado o "" para forçar o compilador a entender que é uma compilação de strings.
+
+	// Colocado o "" para forçar o compilador a entender que é uma compilação de
+	// strings.
 	@Override
 	public String toString() {
 		return "" + column + row;
